@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./components/Home";
-import UIkit from "./components/UIkit";
-import ErrorTracking from "./components/ErrorTracking";
-import WebAnalytics from "./components/WebAnalytics";
+import Home from "./components/Home/Home";
+import UIkit from "./components/UIkit/UIkit";
+import ErrorTracking from "./components/ErrorTracking/ErrorTracking";
+import WebAnalytics from "./components/WebAnalytics/WebAnalytics";
 
 const AppRoutes = () => {
   return (

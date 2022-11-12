@@ -1,0 +1,15 @@
+.background {
+  background-color: rgba(10, 10, 10, 255);
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+}
+
+.text {
+  font-size: 5rem;
+  color: azure;
+}
+
+.container {
+  width: 80vw;
+}
