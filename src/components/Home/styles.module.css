@@ -40,15 +40,16 @@ hr {
   height: 10vh;
 }
 
+/********** Styles used for navbar when it show on scroll up **********/
 .navContainer {
   padding-top: 10px;
 }
-
 .sticky {
   padding-top: 10px;
   position: sticky;
   top: 0px;
 }
+/*--------------------------------------------------------------------*/
 
 .padTop {
   padding-top: 100px;
