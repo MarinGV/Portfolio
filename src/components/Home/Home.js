@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <div className={style.background}>
       <div className={style.container}>
+        <div className={style.navTop} />
         <Nav />
         <Welcome />
         <Projects />
