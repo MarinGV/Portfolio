@@ -6,11 +6,9 @@
   display: grid;
   justify-content: center;
 }
-
 .container {
   width: 80vw;
 }
-
 .navTop {
   height: 10vh;
 }
@@ -21,7 +19,7 @@
   color: azure;
 }
 
-/********** NAVABAR COMPONENT **********/
+/********** NAVABAR SECTION **********/
 
 hr {
   border: 0px;
@@ -33,13 +31,15 @@ hr {
     transparent
   );
 }
+.navBg {
+  background-color: rgba(10, 10, 10, 255);
+}
 .nav {
   display: flex;
   font-size: 1.6rem;
   color: #c2bfcc;
   align-items: center;
   column-gap: 2rem;
-  background-color: rgba(10, 10, 10, 255);
 }
 .navLogo {
   font-family: "Rubik Glitch", cursive;
@@ -67,7 +67,24 @@ hr {
   position: sticky;
   top: 0px;
 }
-/***---------------------------------------***/
+
+/********** WELCOME MESSAGE SECTION **********/
+
+.welcome {
+  text-align: center;
+  color: white;
+  margin: 400px 0 600px 0;
+  font-family: "M PLUS 1 Code", sans-serif;
+}
+.txtLine1 {
+  font-size: 6rem;
+}
+.txtLine2 {
+  font-size: 1.6rem;
+}
+p {
+  margin: 0;
+}
 
 /********** MEDIA **********/
 

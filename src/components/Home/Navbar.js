@@ -53,28 +53,32 @@ const Nav = (props) => {
     // stop tracking the resizing
     return () => window.removeEventListener("resize", updateWindowSize);
   }, [screenWidth]);
+  ///// for this feature to work, you need {CodeOutlined, SettingOutlined, ContactsOutlined,} from "@ant-design/icons"
+  ///// and the ternary operators in the return() section
 
   ////////// DON'T TOUCH ABOVE //////////
 
   return (
     <div className={styleSet}>
-      <hr />
-      <div className={style.nav}>
-        <div className={style.navLogo} onClick={() => sendId("pageTop")}>
-          Marin Vasilciu
+      <div className={style.navBg}>
+        <hr />
+        <div className={style.nav}>
+          <div className={style.navLogo} onClick={() => sendId("pageTop")}>
+            Marin Vasilciu
+          </div>
+          <div className={style.navItem} onClick={() => sendId("projects")}>
+            {/* when the window size is smaller than 600px, change nav item text with icons */}
+            {screenWidth < 600 ? <CodeOutlined /> : "Projects"}
+          </div>
+          <div className={style.navItem} onClick={() => sendId("skills")}>
+            {screenWidth < 600 ? <SettingOutlined /> : "Skills"}
+          </div>
+          <div className={style.navItem} onClick={() => sendId("contact")}>
+            {screenWidth < 600 ? <ContactsOutlined /> : "Contact"}
+          </div>
         </div>
-        <div className={style.navItem} onClick={() => sendId("projects")}>
-          {/* when the window size is smaller than 600px, change nav item text with icons */}
-          {screenWidth < 600 ? <CodeOutlined /> : "Projects"}
-        </div>
-        <div className={style.navItem} onClick={() => sendId("skills")}>
-          {screenWidth < 600 ? <SettingOutlined /> : "Skills"}
-        </div>
-        <div className={style.navItem} onClick={() => sendId("contact")}>
-          {screenWidth < 600 ? <ContactsOutlined /> : "Contact"}
-        </div>
+        <hr />
       </div>
-      <hr />
     </div>
   );
 };
