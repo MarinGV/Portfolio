@@ -1,7 +1,7 @@
 /********** HOME COMPONENT **********/
 
 .background {
-  background-color: rgba(10, 10, 10, 255);
+  background-color: rgb(10, 10, 10);
   height: 100%;
   display: grid;
   justify-content: center;
@@ -22,7 +22,7 @@
 /********** NAVABAR SECTION **********/
 
 hr {
-  border: 0px;
+  border: none;
   height: 1px;
   background-image: linear-gradient(
     to right,
@@ -73,7 +73,7 @@ hr {
 .welcome {
   text-align: center;
   color: white;
-  margin: 400px 0 600px 0;
+  margin: 400px 0 700px 0;
   font-family: "M PLUS 1 Code", sans-serif;
 }
 .txtLine1 {
@@ -86,10 +86,18 @@ p {
   margin: 0;
 }
 
+/********** PROJECTS SECTION **********/
+.tempP {
+  height: 500px;
+  font-size: 5rem;
+  color: azure;
+}
+
 /********** MEDIA **********/
 
 /* Phones */
 @media (max-width: 599px) {
+  /********** NAVABAR SECTION **********/
   .nav {
     font-size: 0.9rem;
     column-gap: 0.8rem;
@@ -101,9 +109,17 @@ p {
   .navItem:nth-child(4) {
     padding-right: 1rem;
   }
+  /********** WELCOME SECTION **********/
+  .txtLine1 {
+    font-size: 3rem;
+  }
+  .txtLine2 {
+    font-size: 0.8rem;
+  }
 }
 /* Tablet */
 @media (min-width: 600px) and (max-width: 767px) {
+  /********** NAVABAR SECTION **********/
   .nav {
     font-size: 0.9rem;
     column-gap: 0.8rem;
@@ -115,9 +131,20 @@ p {
   .navItem:nth-child(4) {
     padding-right: 2rem;
   }
+  /********** WELCOME SECTION **********/
+  .welcome {
+    margin: 400px 0 450px 0;
+  }
+  .txtLine1 {
+    font-size: 3.5rem;
+  }
+  .txtLine2 {
+    font-size: 1rem;
+  }
 }
 /* Laptop */
 @media (min-width: 768px) and (max-width: 899px) {
+  /********** NAVABAR SECTION **********/
   .nav {
     font-size: 1rem;
     column-gap: 1rem;
@@ -129,9 +156,17 @@ p {
   .navItem:nth-child(4) {
     padding-right: 3rem;
   }
+  /********** WELCOME SECTION **********/
+  .txtLine1 {
+    font-size: 4rem;
+  }
+  .txtLine2 {
+    font-size: 1.1rem;
+  }
 }
 /* Monitor */
 @media (min-width: 900px) and (max-width: 1199px) {
+  /********** NAVABAR SECTION **********/
   .nav {
     font-size: 1.1rem;
     column-gap: 1.5rem;
@@ -142,5 +177,28 @@ p {
   }
   .navItem:nth-child(4) {
     padding-right: 4rem;
+  }
+  /********** WELCOME SECTION **********/
+  .txtLine1 {
+    font-size: 4rem;
+  }
+  .txtLine2 {
+    font-size: 1.1rem;
+  }
+}
+
+/********** MEDIA for landscape orientation **********/
+/* Phones */
+@media (max-width: 599px) and (orientation: landscape) {
+  /********** WELCOME SECTION **********/
+  .welcome {
+    margin: 200px 0 300px 0;
+  }
+}
+/* Tablet */
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+  /********** WELCOME SECTION **********/
+  .welcome {
+    margin: 300px 0 400px 0;
   }
 }

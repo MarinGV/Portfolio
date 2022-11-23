@@ -1,0 +1,46 @@
+#tsparticles {
+  width: 80%;
+  height: 1325px;
+  position: absolute;
+}
+
+/********** MEDIA **********/
+
+/* Phones */
+@media (max-width: 599px) {
+  #tsparticles {
+    height: 1200px;
+  }
+}
+/* Tablet */
+@media (min-width: 600px) and (max-width: 767px) {
+  #tsparticles {
+    height: 1000px;
+  }
+}
+/* Laptop */
+@media (min-width: 768px) and (max-width: 899px) {
+  #tsparticles {
+    height: 1250px;
+  }
+}
+/* Monitor */
+@media (min-width: 900px) and (max-width: 1199px) {
+  #tsparticles {
+    height: 1270px;
+  }
+}
+
+/********** MEDIA for landscape orientation **********/
+/* Phones */
+@media (max-width: 599px) and (orientation: landscape) {
+  #tsparticles {
+    height: 600px;
+  }
+}
+/* Tablet */
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+  #tsparticles {
+    height: 820px;
+  }
+}

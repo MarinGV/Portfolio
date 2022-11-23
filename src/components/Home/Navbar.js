@@ -1,35 +1,18 @@
-import React, { useState, useEffect } from "react";
-import style from "./styles.module.css";
+import React from "react";
+import style from "./styles/styles.module.css";
 import {
   CodeOutlined,
   SettingOutlined,
   ContactsOutlined,
 } from "@ant-design/icons";
 
+import useUpdatePosition from "./hooks/useUpdatePosition";
+import useIconChange from "./hooks/useIconChange";
+
 const Nav = (props) => {
   ////////// SHOW NAVBAR ON SCROLL UP //////////
-  // tracks vertical position
-  const [scrollPosition, setScrollPosition] = useState(0);
-  // chooses the style for navbar depending on scrolling direction
-  const [styleSet, setStyleSet] = useState(style.navContainer);
-
-  // decide scrolling direction and set navbar styling
-  useEffect(() => {
-    const updatePosition = () => {
-      setStyleSet(
-        // decide scrolling direction and set navbar styling
-        window.scrollY > scrollPosition ? style.navContainer : style.sticky
-      );
-      // update current vertical position
-      setScrollPosition(window.scrollY);
-    };
-    // track scrolling when active
-    window.addEventListener("scroll", updatePosition);
-    // stops scrolling tracking
-    return () => window.removeEventListener("scroll", updatePosition);
-  });
-  ///// for this feature to work, you need the classes
-  ///// .navContainer and .sticky from the styles.module.css
+  const { styleSet } = useUpdatePosition();
+  ///// for this feature to work, you need the hook useUpdatePosition()
 
   ////////// NAVBAR ITEM SCROLLS TO SECTION //////////
   // send to <Home /> the ids to the section it has to scroll to
@@ -40,19 +23,7 @@ const Nav = (props) => {
   ///// and the onClick events in this component
 
   ////////// NAVBAR ITEM ICON CHANGE //////////
-  // tracks horizontal window size
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const updateWindowSize = () => {
-      // update current window size in case the user changes window size
-      setScreenWidth(window.innerWidth);
-    };
-    // track the resizing when it happens
-    window.addEventListener("resize", updateWindowSize);
-    // stop tracking the resizing
-    return () => window.removeEventListener("resize", updateWindowSize);
-  }, [screenWidth]);
+  const { screenWidth } = useIconChange();
   ///// for this feature to work, you need {CodeOutlined, SettingOutlined, ContactsOutlined,} from "@ant-design/icons"
   ///// and the ternary operators in the return() section
 

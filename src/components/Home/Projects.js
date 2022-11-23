@@ -1,11 +1,13 @@
 import React from "react";
-import style from "./styles.module.css";
+import style from "./styles/styles.module.css";
 
 const Projects = () => {
   return (
-    <div className={style.tempC} id="projects">
-      Projects
-    </div>
+    <>
+      <div className={style.tempP} id="projects">
+        Projects
+      </div>
+    </>
   );
 };
 
