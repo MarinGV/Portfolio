@@ -35,15 +35,15 @@ hr {
   background-color: rgba(10, 10, 10, 255);
 }
 .nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 95px 60px 150px;
+  gap: 15px;
   font-size: 1.6rem;
   color: #c2bfcc;
   align-items: center;
-  column-gap: 2rem;
 }
 .navLogo {
   font-family: "Rubik Glitch", cursive;
-  margin-right: auto;
   font-size: 3rem;
   padding-left: 5rem;
   cursor: pointer;
@@ -55,9 +55,7 @@ hr {
   cursor: pointer;
   font-family: "Barlow", sans-serif;
 }
-.navItem:nth-child(4) {
-  padding-right: 5rem;
-}
+
 /*** FOR SHOW NAVABAR ON SCROLL UP FEATURE ***/
 .navContainer {
   padding-top: 10px;
@@ -87,10 +85,76 @@ p {
 }
 
 /********** PROJECTS SECTION **********/
-.tempP {
-  height: 500px;
-  font-size: 5rem;
+.projectSection {
+  margin-bottom: 15vh;
+  font-size: 3rem;
   color: azure;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.titleP {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  font-family: "Patrick Hand", cursive;
+  margin: 0 0 15vh 0;
+}
+.proj1 {
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+.proj2 {
+  grid-column: 2 / 3;
+  grid-row: 2;
+}
+.proj3 {
+  grid-column: 3 / 4;
+  grid-row: 2;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  aspect-ratio: 0.8;
+  width: 20vw;
+  box-shadow: 0 0 10px red;
+  background-color: rgba(32, 32, 145, 0.637);
+}
+.cardTitle {
+  font-family: "Patrick Hand", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.cardText {
+  font-size: 1.5rem;
+}
+
+.imgCard {
+  height: 50%;
+  /* padding-top: 5px; */
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+}
+
+/********** SECTION BREAK **********/
+.sectionBreak {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: auto 60px auto;
+  align-items: center;
+  justify-items: center;
+}
+.outerLine {
+  width: 80%;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    #c2bfcc,
+    transparent
+  );
+  height: 1px;
 }
 
 /********** MEDIA **********/
@@ -100,7 +164,8 @@ p {
   /********** NAVABAR SECTION **********/
   .nav {
     font-size: 0.9rem;
-    column-gap: 0.8rem;
+    grid-template-columns: auto 20px 16px 32px;
+    gap: 15px;
   }
   .navLogo {
     font-size: 0.9rem;
@@ -116,20 +181,22 @@ p {
   .txtLine2 {
     font-size: 0.8rem;
   }
+  /********** SECTION BREAK **********/
+  .sectionBreak {
+    grid-template-columns: auto 30px auto;
+  }
 }
 /* Tablet */
 @media (min-width: 600px) and (max-width: 767px) {
   /********** NAVABAR SECTION **********/
   .nav {
     font-size: 0.9rem;
-    column-gap: 0.8rem;
+    grid-template-columns: auto 55px 35px 75px;
+    gap: 10px;
   }
   .navLogo {
     font-size: 1.5rem;
     padding-left: 2rem;
-  }
-  .navItem:nth-child(4) {
-    padding-right: 2rem;
   }
   /********** WELCOME SECTION **********/
   .welcome {
@@ -141,20 +208,22 @@ p {
   .txtLine2 {
     font-size: 1rem;
   }
+  /********** SECTION BREAK **********/
+  .sectionBreak {
+    grid-template-columns: auto 40px auto;
+  }
 }
 /* Laptop */
 @media (min-width: 768px) and (max-width: 899px) {
   /********** NAVABAR SECTION **********/
   .nav {
     font-size: 1rem;
-    column-gap: 1rem;
+    grid-template-columns: auto 60px 40px 90px;
+    gap: 12px;
   }
   .navLogo {
     font-size: 2rem;
     padding-left: 3rem;
-  }
-  .navItem:nth-child(4) {
-    padding-right: 3rem;
   }
   /********** WELCOME SECTION **********/
   .txtLine1 {
@@ -163,20 +232,21 @@ p {
   .txtLine2 {
     font-size: 1.1rem;
   }
+  /********** SECTION BREAK **********/
+  .sectionBreak {
+    grid-template-columns: auto 40px auto;
+  }
 }
 /* Monitor */
 @media (min-width: 900px) and (max-width: 1199px) {
   /********** NAVABAR SECTION **********/
   .nav {
     font-size: 1.1rem;
-    column-gap: 1.5rem;
+    grid-template-columns: auto 70px 45px 110px;
   }
   .navLogo {
     font-size: 2.2rem;
     padding-left: 4rem;
-  }
-  .navItem:nth-child(4) {
-    padding-right: 4rem;
   }
   /********** WELCOME SECTION **********/
   .txtLine1 {
