@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useIconChange = () => {
+const useWindowResize = () => {
   // tracks horizontal window size
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -8,6 +8,7 @@ const useIconChange = () => {
     const updateWindowSize = () => {
       // update current window size in case the user changes window size
       setScreenWidth(window.innerWidth);
+      console.log(screenWidth);
     };
     // track the resizing when it happens
     window.addEventListener("resize", updateWindowSize);
@@ -18,4 +19,4 @@ const useIconChange = () => {
   return { screenWidth };
 };
 
-export default useIconChange;
+export default useWindowResize;

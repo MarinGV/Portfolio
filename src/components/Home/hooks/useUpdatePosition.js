@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import style from "../styles/styles.module.css";
+import style from "../styles/nav.module.css";
 
 const useUpdatePosition = () => {
   // tracks vertical position

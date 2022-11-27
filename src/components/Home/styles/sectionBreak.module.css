@@ -1,0 +1,49 @@
+.sectionBreak {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  justify-items: center;
+}
+.sideLine {
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    #c2bfcc,
+    transparent
+  );
+  height: 1px;
+}
+.title {
+  color: azure;
+  font-size: 2rem;
+  font-family: "Patrick Hand", cursive;
+}
+
+/********** MEDIA **********/
+
+/* Phones */
+@media (max-width: 599px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+/* Tablet */
+@media (min-width: 600px) and (max-width: 767px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+/* Laptop */
+@media (min-width: 768px) and (max-width: 899px) {
+  .title {
+    font-size: 2.1rem;
+  }
+}
+/* Monitor */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .title {
+    font-size: 2.2rem;
+  }
+}

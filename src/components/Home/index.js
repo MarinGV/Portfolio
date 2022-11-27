@@ -17,7 +17,7 @@ const Home = () => {
       // chooses the sectio by the id provided through the data
       .getElementById(data)
       // sets scrolling type and where to stop at the section
-      .scrollIntoView({ behavior: "smooth", block: "center" });
+      .scrollIntoView({ behavior: "smooth", block: "start" });
   };
   ///// for this feature to work, you need the code in <Nav />,
   ///// the ids set in this component, <Projects />, <Skills /> and <Contact />,

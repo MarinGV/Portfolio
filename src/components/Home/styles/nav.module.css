@@ -1,0 +1,100 @@
+.containerBg {
+  background-color: rgba(10, 10, 10, 255);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    #c2bfcc,
+    transparent
+  );
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: auto 100px 65px 150px;
+  gap: 1vw;
+  font-size: 1.6rem;
+  color: #c2bfcc;
+  align-items: center;
+}
+.navLogo {
+  font-family: "Rubik Glitch", cursive;
+  font-size: 2rem;
+  padding-left: 80px;
+  cursor: pointer;
+  background-color: #c2bfcc;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navItem {
+  cursor: pointer;
+  font-family: "Barlow", sans-serif;
+}
+
+/*** FOR SHOW NAVABAR ON SCROLL UP FEATURE ***/
+.navContainer {
+  padding-top: 10px;
+}
+.sticky {
+  padding-top: 10px;
+  position: sticky;
+  top: 0px;
+}
+
+/********** MEDIA **********/
+
+/* Phones */
+@media (max-width: 599px) {
+  .nav {
+    grid-template-columns: auto 20px 20px 50px;
+    gap: 3vw;
+    font-size: 1rem;
+  }
+  .navLogo {
+    font-size: 1.2rem;
+    padding-left: 30px;
+  }
+  .navItem:nth-child(4) {
+    padding-right: 30px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 767px) {
+  .nav {
+    grid-template-columns: auto 65px 40px 83px;
+    font-size: 1rem;
+  }
+  .navLogo {
+    font-size: 1.2rem;
+    padding-left: 30px;
+  }
+}
+
+/* Laptop */
+@media (min-width: 768px) and (max-width: 899px) {
+  .nav {
+    grid-template-columns: auto 70px 45px 90px;
+    font-size: 1.1rem;
+  }
+  .navLogo {
+    font-size: 1.5rem;
+    padding-left: 30px;
+  }
+}
+
+/* Monitor */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .nav {
+    grid-template-columns: auto 75px 50px 120px;
+    font-size: 1.2rem;
+  }
+  .navLogo {
+    font-size: 1.8rem;
+    padding-left: 50px;
+  }
+}

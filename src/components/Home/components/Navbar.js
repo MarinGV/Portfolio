@@ -1,10 +1,10 @@
 import React from "react";
-import style from "../styles/styles.module.css";
+import style from "../styles/nav.module.css";
 
 import SVG from "../svg";
 
 import useUpdatePosition from "../hooks/useUpdatePosition";
-import useIconChange from "../hooks/useIconChange";
+import useWindowResize from "../hooks/useWindowResize";
 
 const Nav = (props) => {
   ////////// SHOW NAVBAR ON SCROLL UP //////////
@@ -20,7 +20,7 @@ const Nav = (props) => {
   ///// and the onClick events in this component
 
   ////////// NAVBAR ITEM ICON CHANGE //////////
-  const { screenWidth } = useIconChange();
+  const { screenWidth } = useWindowResize();
   ///// for this feature to work, you need the svg icons from "../svg"
   ///// and the ternary operators in the return() section
 
@@ -28,7 +28,7 @@ const Nav = (props) => {
 
   return (
     <div className={styleSet}>
-      <div className={style.navBg}>
+      <div className={style.containerBg}>
         <hr />
         <div className={style.nav}>
           <div className={style.navLogo} onClick={() => sendId("pageTop")}>

@@ -1,0 +1,63 @@
+.welcome {
+  text-align: center;
+  color: white;
+  margin: 400px 0 700px 0;
+  font-family: "M PLUS 1 Code", sans-serif;
+}
+.name {
+  font-family: "Rubik Glitch", cursive;
+}
+.txtLine1 {
+  font-size: 6rem;
+}
+.txtLine2 {
+  font-size: 1.6rem;
+}
+p {
+  margin: 0;
+}
+
+/********** MEDIA **********/
+
+/* Phones */
+@media (max-width: 599px) {
+  .txtLine1 {
+    font-size: 3rem;
+  }
+  .txtLine2 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 767px) {
+  .welcome {
+    margin: 400px 0 500px 0;
+  }
+  .txtLine1 {
+    font-size: 3.5rem;
+  }
+  .txtLine2 {
+    font-size: 1rem;
+  }
+}
+
+/* Laptop */
+@media (min-width: 768px) and (max-width: 899px) {
+  .txtLine1 {
+    font-size: 4rem;
+  }
+  .txtLine2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Monitor */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .txtLine1 {
+    font-size: 4rem;
+  }
+  .txtLine2 {
+    font-size: 1.1rem;
+  }
+}

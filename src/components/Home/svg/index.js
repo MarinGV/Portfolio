@@ -4,7 +4,7 @@ import SvgCode from "./SvgCode";
 import SvgEnvelope from "./SvgEnvelope";
 import SvgGear from "./SvgGear";
 import SvgDefault from "./SvgDefault";
-import SvgNoImg from "./SvgNoImg";
+import SvgArrowRight from "./SvgArrowRight";
 
 const SVG = (props) => {
   switch (props.name) {
@@ -14,8 +14,8 @@ const SVG = (props) => {
       return <SvgEnvelope fill={props.fill} />;
     case "gear":
       return <SvgGear fill={props.fill} />;
-    case "no-img":
-      return <SvgNoImg fill={props.fill} />;
+    case "arrow-right":
+      return <SvgArrowRight />;
     default:
       return <SvgDefault fill={props.fill} />;
   }

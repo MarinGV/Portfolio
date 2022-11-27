@@ -1,0 +1,91 @@
+.card {
+  position: relative;
+  width: 340px;
+  height: 450px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  /* top will move the circles in the card up and down */
+  top: -190px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  background: rgb(10, 10, 10);
+  clip-path: circle();
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -16px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: 0 0 0 20px rgba(255, 0, 0);
+  opacity: 0.5;
+  border-radius: 50%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.circle .imgBx {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 340px;
+  height: 310px;
+}
+
+/* this can be removed depending on the picture */
+/* some pictures don't need it, but it loses the scaling transform*/
+/* .circle .imgBx img {
+  position: absolute;
+  top: 10p;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  transform-origin: top;
+}
+
+.circle .imgBx:hover img {
+  transform: scale(1.1);
+} */
+
+.content {
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  width: 85%;
+  height: 120px;
+  /* background: #777; */
+}
+
+.content .title {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Patrick Hand", cursive;
+  margin-bottom: 10px;
+}
+
+.content .summary {
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.content .icon {
+  width: 25px;
+  position: absolute;
+  right: 5px;
+  bottom: 15px;
+  color: red;
+  cursor: pointer;
+}
