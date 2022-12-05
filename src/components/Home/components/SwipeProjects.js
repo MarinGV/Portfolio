@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Mousewheel } from "swiper";
 import Card from "./Card";
-import pic from "../pictures/oldman.jpg";
+import pic from "../pictures/comingSoon.jpg";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
