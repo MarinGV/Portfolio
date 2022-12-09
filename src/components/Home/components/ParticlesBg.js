@@ -8,13 +8,13 @@ const ParticlesBg = () => {
   }, []);
 
   return (
-    <Particles
+   <Particles
       id="tsparticles"
       init={particlesInit}
       options={{
         fullScreen: {
           enable: false,
-          zIndex: -10,
+          zIndex: -100,
         },
         background: {
           color: {

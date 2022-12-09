@@ -5,7 +5,7 @@ const useUpdatePosition = () => {
   // tracks vertical position
   const [scrollPosition, setScrollPosition] = useState(0);
   // chooses the style for navbar depending on scrolling direction
-  const [styleSet, setStyleSet] = useState(style.navContainer);
+  const [styleSet, setStyleSet] = useState(style.sticky);
 
   useEffect(() => {
     // decide scrolling direction and set navbar styling

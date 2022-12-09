@@ -43,6 +43,7 @@ const SwipeProjects = () => {
           pic={pic}
           alt="some text"
           summary="A set of reusable components such as buttons, inputs, cards, modals..."
+          destination="/"
         />
       </SwiperSlide>
       <SwiperSlide>
@@ -51,6 +52,7 @@ const SwipeProjects = () => {
           pic={pic}
           alt="some text"
           summary="A tool to report errors on websites or applications."
+          destination="/"
         />
       </SwiperSlide>
       <SwiperSlide>
@@ -59,6 +61,7 @@ const SwipeProjects = () => {
           pic={pic}
           alt="some text"
           summary="An analytics tool that uses fake data."
+          destination="/"
         />
       </SwiperSlide>
     </Swiper>
