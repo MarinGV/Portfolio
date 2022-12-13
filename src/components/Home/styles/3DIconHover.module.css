@@ -1,0 +1,130 @@
+:root {
+  --size33: 33.333%;
+  --size66: 66.666%;
+  --tiltdeg: 25;
+  --box-wrap-length: 100px;
+  --icon-box-difference: 0.8;
+}
+
+a {
+  text-decoration: none;
+}
+
+SVG {
+  width: calc(var(--box-wrap-length) * var(--icon-box-difference));
+  height: calc(var(--box-wrap-length) * var(--icon-box-difference));
+}
+.container {
+}
+
+.tiltBoxWrap {
+  width: var(--box-wrap-length);
+  height: var(--box-wrap-length);
+  position: relative;
+  transition: all 0.6s ease-out;
+  perspective: 1000px;
+}
+
+.tiltBoxWrap:hover {
+  transition: all 0.3s linear;
+  transform: scale(1.1);
+}
+
+.tiltBox {
+  width: 100%;
+  height: 100%;
+  background: #04527b;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  /* color: #fff; */
+  font-size: 90px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: all 0.6s ease-out;
+  transform: rotateX(0deg) rotateY(0deg);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.tiltBox SVG {
+  transform: translateZ(40px);
+}
+
+.tOver {
+  width: var(--size33);
+  height: var(--size33);
+  position: absolute;
+  z-index: 1;
+}
+
+.tOver:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+.tOver:nth-child(2) {
+  left: var(--size33);
+  top: 0;
+}
+.tOver:nth-child(3) {
+  left: var(--size66);
+  top: 0;
+}
+.tOver:nth-child(4) {
+  left: 0;
+  top: var(--size33);
+}
+.tOver:nth-child(5) {
+  left: var(--size33);
+  top: var(--size33);
+}
+.tOver:nth-child(6) {
+  left: var(--size66);
+  top: var(--size33);
+}
+.tOver:nth-child(7) {
+  left: 0;
+  top: var(--size66);
+}
+.tOver:nth-child(8) {
+  left: var(--size33);
+  top: var(--size66);
+}
+.tOver:nth-child(9) {
+  left: var(--size66);
+  top: var(--size66);
+}
+
+.tOver:nth-child(1):hover ~ .tiltBox {
+  transform: rotateX(calc(-1 * var(--tiltdeg) * 1deg))
+    rotateY(calc(var(--tiltdeg) * 1deg));
+}
+.tOver:nth-child(2):hover ~ .tiltBox {
+  transform: rotateX(calc(-1 * var(--tiltdeg) * 1deg)) rotateY(0deg);
+}
+.tOver:nth-child(3):hover ~ .tiltBox {
+  transform: rotateX(calc(-1 * var(--tiltdeg) * 1deg))
+    rotateY(calc(-1 * var(--tiltdeg) * 1deg));
+}
+.tOver:nth-child(4):hover ~ .tiltBox {
+  transform: rotateX(0deg) rotateY(calc(var(--tiltdeg) * 1deg));
+}
+.tOver:nth-child(5):hover ~ .tiltBox {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+.tOver:nth-child(6):hover ~ .tiltBox {
+  transform: rotateX(0deg) rotateY(calc(-1 * var(--tiltdeg) * 1deg));
+}
+.tOver:nth-child(7):hover ~ .tiltBox {
+  transform: rotateX(calc(var(--tiltdeg) * 1deg))
+    rotateY(calc(var(--tiltdeg) * 1deg));
+}
+.tOver:nth-child(8):hover ~ .tiltBox {
+  transform: rotateX(calc(var(--tiltdeg) * 1deg)) rotateY(0deg);
+}
+.tOver:nth-child(9):hover ~ .tiltBox {
+  transform: rotateX(calc(var(--tiltdeg) * 1deg))
+    rotateY(calc(-1 * var(--tiltdeg) * 1deg));
+}

@@ -13,6 +13,7 @@
     "react-tsparticles": "^2.5.3",
     "swiper": "^8.4.5",
     "tsparticles": "^2.5.3",
+    "vanilla-tilt": "^1.7.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
