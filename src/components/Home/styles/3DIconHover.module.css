@@ -10,11 +10,9 @@ a {
   text-decoration: none;
 }
 
-SVG {
+.svgSize {
   width: calc(var(--box-wrap-length) * var(--icon-box-difference));
   height: calc(var(--box-wrap-length) * var(--icon-box-difference));
-}
-.container {
 }
 
 .tiltBoxWrap {
@@ -39,7 +37,6 @@ SVG {
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  /* color: #fff; */
   font-size: 90px;
   border-radius: 10px;
   text-transform: uppercase;
@@ -49,7 +46,7 @@ SVG {
   transform-style: preserve-3d;
 }
 
-.tiltBox SVG {
+.tiltBox div {
   transform: translateZ(40px);
 }
 

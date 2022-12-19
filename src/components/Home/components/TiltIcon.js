@@ -18,7 +18,9 @@ const TiltIcon = (props) => {
           <span className={style.tOver} />
           <span className={style.tOver} />
           <div className={style.tiltBox} style={{ background: props.bgCol }}>
-            <SVG name={props.icon} />
+            <div className={style.svgSize}>
+              <SVG name={props.icon} />
+            </div>
           </div>
         </div>
       </div>

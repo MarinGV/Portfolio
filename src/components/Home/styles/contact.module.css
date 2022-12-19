@@ -4,4 +4,22 @@
   align-items: center;
   justify-content: center;
   gap: 15%;
+  margin-bottom: 100px;
+}
+
+/********** MEDIA **********/
+
+/* Phones */
+@media (max-width: 599px) {
+  .container {
+    grid-template-areas: "item1 item2" "item3 item4";
+    gap: 30%;
+  }
+}
+/* Tablet */
+@media (min-width: 600px) and (max-width: 767px) {
+  .container {
+    grid-template-areas: "item1 item2" "item3 item4";
+    gap: 35%;
+  }
 }

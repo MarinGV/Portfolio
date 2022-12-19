@@ -26,12 +26,11 @@ const Contact = () => {
           bgCol="#720e9e"
         />
         <TiltIcon
-          address="mailto:dragonuler@gmail.com"
+          address="mailto:dragonulera@gmail.com"
           icon="gmail"
           bgCol="#fff"
         />
       </div>
-      <SectionBreak type="text" text="or directly" />
     </section>
   );
 };

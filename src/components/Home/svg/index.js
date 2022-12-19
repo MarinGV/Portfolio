@@ -7,7 +7,7 @@ import SvgDefault from "./SvgDefault";
 import SvgArrowRight from "./SvgArrowRight";
 import SvgLinkedIn from "./SvgLinkedIn";
 import SvgGitHub from "./SvgGitHub";
-import SvGGmail from "./SvGGmail";
+import SvgGmail from "./SvgGmail";
 import SvgYahoo from "./SvgYahoo";
 
 const SVG = (props) => {
@@ -27,7 +27,7 @@ const SVG = (props) => {
     case "yahoo":
       return <SvgYahoo fill={props.fill} />;
     case "gmail":
-      return <SvGGmail />;
+      return <SvgGmail />;
     default:
       return <SvgDefault fill={props.fill} />;
   }
