@@ -1,6 +1,5 @@
 .containerBg {
   background-color: rgba(10, 10, 10, 255);
-  z-index: 1000;
 }
 
 hr {
@@ -44,6 +43,7 @@ hr {
   padding-top: 10px;
   position: sticky;
   top: 0px;
+  z-index: 100;
 }
 
 /********** MEDIA **********/

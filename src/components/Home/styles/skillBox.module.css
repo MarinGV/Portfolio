@@ -1,0 +1,141 @@
+:root {
+  --width-size: 100%;
+  --height-size: 200px;
+
+  --image1: url(../pictures/fundamnetals.jpg);
+  --image2: url(../pictures/MERN.jpg);
+  --image3: url(../pictures/SOLID.jpg);
+  --image4: url(../pictures/COMM.jpg);
+  --image5: url(../pictures/MANAGE.jpg);
+  --gap-width: 40px;
+  --gap-diff: 0px;
+  --gap-row: calc(var(--gap-width) - var(--gap-diff));
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "title" "content";
+  justify-content: center;
+  row-gap: 15px;
+
+  box-shadow: 0 0 5px 0 hsla(234, 50%, 99%, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
+
+  width: var(--width-size);
+  height: var(--height-size);
+}
+
+.containerBg {
+  background-size: var(--width-size) var(--height-size);
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border: 0px solid hsla(0, 0%, 100%, 0.3);
+}
+
+.title {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  align-self: end;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+.title:hover ~ .content {
+  visibility: visible;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-row);
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  align-self: start;
+  visibility: hidden;
+}
+.contitems {
+  display: flex;
+  gap: var(--gap-width);
+  justify-content: center;
+}
+
+/********** MEDIA **********/
+
+/* Phones */
+@media (max-width: 599px) {
+  :root {
+    --gap-width: 10px;
+    --gap-diff: 5px;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .content {
+    font-size: 0.8rem;
+  }
+}
+/* Tablet */
+@media (min-width: 600px) and (max-width: 767px) {
+  :root {
+    --gap-width: 15px;
+    --gap-diff: 10px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .content {
+    font-size: 1rem;
+  }
+}
+/* Laptop */
+@media (min-width: 768px) and (max-width: 899px) {
+  :root {
+    --gap-width: 20px;
+    --gap-diff: 15px;
+  }
+  .title {
+    font-size: 2.1rem;
+  }
+  .content {
+    font-size: 1.1rem;
+  }
+}
+/* Monitor */
+@media (min-width: 900px) and (max-width: 1199px) {
+  :root {
+    --gap-width: 30px;
+    --gap-diff: 20px;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .content {
+    font-size: 1.1rem;
+  }
+}
+/* Monitor XL*/
+@media (min-width: 1200px) and (max-width: 1599px) {
+  :root {
+    --gap-width: 30px;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .content {
+    font-size: 1.1rem;
+    flex-direction: row;
+  }
+}
+/* Monitor XXL*/
+@media (min-width: 1600px) {
+  .content {
+    flex-direction: row;
+  }
+}

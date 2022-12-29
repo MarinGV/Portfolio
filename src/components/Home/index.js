@@ -1,11 +1,11 @@
 import React from "react";
 
-import ParticlesBg from "./components/ParticlesBg";
-import Nav from "./components/Navbar";
-import Welcome from "./components/WelcomeMs";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
+import ParticlesBg from "./ParticlesBg";
+import Nav from "./Navbar";
+import Welcome from "./WelcomeMs";
+import Projects from "./Projects";
+import Skills from "./Skills";
+import Contact from "./Contact";
 
 import style from "./styles/styles.module.css";
 import "./styles/tsParticles.css";
