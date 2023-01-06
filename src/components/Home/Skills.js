@@ -12,6 +12,7 @@ const Skills = () => {
       <div className={style.container}>
         <SkillBox title="Fundamentals" image="var(--image1)">
           HTML &nbsp;&nbsp;&nbsp; CSS &nbsp;&nbsp;&nbsp; JavaScript
+          &nbsp;&nbsp;&nbsp; Git
         </SkillBox>
         <SkillBox title="MERN Stack" image="var(--image2)">
           MongoDB &nbsp;&nbsp;&nbsp; Express.js &nbsp;&nbsp;&nbsp; React.js

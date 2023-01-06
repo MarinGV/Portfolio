@@ -26,7 +26,7 @@ const Contact = () => {
           bgCol="#720e9e"
         />
         <TiltIcon
-          address="mailto:dragonulera@gmail.com"
+          address="mailto:maringvasilciu@gmail.com"
           icon="gmail"
           bgCol="#fff"
         />
